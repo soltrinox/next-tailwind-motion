@@ -8,18 +8,8 @@ module.exports = {
         'react-dom/test-utils': 'preact/test-utils',
         'react-dom': 'preact/compat',
       });
-    }
-    onfig.node = {
-      fs: 'empty',
     };
-    config.module.rules.push({
-      test: /\.css$/,
-      loader: ['style-loader', 'css-loader'],
-    });
-    if (config.resolve.alias) {
-      delete config.resolve.alias.react;
-      delete config.resolve.alias['react-dom'];
-    }
+
     return config;
   },
 };
